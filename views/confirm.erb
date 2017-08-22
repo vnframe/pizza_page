@@ -1,11 +1,23 @@
 <form method="post" action="/confirm"> 
 
 Sauce:
+    <%counter = 0%>
     <%sauce.each do |value|%>
     <p> <%=value%>
-    <input type = "radio" name = "sauce" value = "yes"> Yes
-    <input type = "radio" name = "sauce" value = "no"> No </p>
+    <input type = "radio" name = "sauce<%=counter.to_s%>" value = "yes"> Yes
+    <input type = "radio" name = "sauce<%=counter.to_s%>" value = "no"> No </p>
+    <%counter += 1%>
     <%end%>
+Cheese:
+    <%counter = 0%>
+    <%cheese.each do |value|%>
+    <p> <%=value%>
+    <input type = "radio" name = "cheese<%=counter.to_s%>" value = "yes"> Yes
+    <input type = "radio" name = "cheese<%=counter.to_s%>" value = "no"> No </p>
+    <%counter += 1%>
+    <%end%>
+
+
     </form>
 
 <%=sauce%>
