@@ -16,13 +16,23 @@ Cheese:
     <input type = "radio" name = "cheese<%=counter.to_s%>" value = "no"> No </p>
     <%counter += 1%>
     <%end%>
+Meat: 
+     <%counter = 0%>
+    <%meat.each do |value|%>
+    <p> <%=value%>
+    <input type = "radio" name = "meat<%=counter.to_s%>" value = "yes"> Yes
+    <input type = "radio" name = "meat<%=counter.to_s%>" value = "no"> No </p>
+    <%counter += 1%>
+    <%end%>
 
+Veggies:
+ <%counter = 0%>
+    <%veg.each do |value|%>
+    <p> <%=value%>
+    <input type = "radio" name = "veg<%=counter.to_s%>" value = "yes"> Yes
+    <input type = "radio" name = "veg<%=counter.to_s%>" value = "no"> No </p>
+    <%counter += 1%>
+    <%end%>
 
     </form>
 
-<%=sauce%>
-
-
-<%=cheese%>
-
-<%=meat%>
