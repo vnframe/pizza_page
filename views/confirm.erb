@@ -1,1 +1,16 @@
+<form method="post" action="/confirm"> 
+
+Sauce:
+    <%sauce.each do |value|%>
+    <p> <%=value%>
+    <input type = "radio" name = "sauce" value = "yes"> Yes
+    <input type = "radio" name = "sauce" value = "no"> No </p>
+    <%end%>
+    </form>
+
 <%=sauce%>
+
+
+<%=cheese%>
+
+<%=meat%>
