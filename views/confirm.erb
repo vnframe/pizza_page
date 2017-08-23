@@ -4,24 +4,24 @@ Sauce:
     <%sauce_counter = 0%>
     <%sauce.each do |value|%>
     <p> <%=value%>
-    <input type = "radio" name = "sauces<%=sauce_counter.to_s%>" value = "yes"> Yes
-    <input type = "radio" name = "sauces<%=sauce_counter.to_s%>" value = "no"> No </p>
+    <input type = "radio" name = "sauce<%=sauce_counter.to_s%>" value = "yes"> Yes
+    <input type = "radio" name = "sauce<%=sauce_counter.to_s%>" value = "no"> No </p>
     <%sauce_counter += 1%>
     <%end%>
 Cheese:
     <%cheese_counter = 0%>
     <%cheese.each do |value|%>
     <p> <%=value%>
-    <input type = "radio" name = "cheeses<%=cheese_counter.to_s%>" value = "<%=value%>"> Yes
-    <input type = "radio" name = "cheeses<%=cheese_counter.to_s%>" value = " "> No </p>
+    <input type = "radio" name = "cheese<%=cheese_counter.to_s%>" value = "<%=value%>"> Yes
+    <input type = "radio" name = "cheese<%=cheese_counter.to_s%>" value = " "> No </p>
     <%cheese_counter += 1%>
     <%end%>
 Meat: 
      <%meat_counter = 0%>
     <%meat.each do |value|%>
     <p> <%=value%>
-    <input type = "radio" name = "meats<%=meat_counter.to_s%>" value = "<%=value%>"> Yes
-    <input type = "radio" name = "meats<%=meat_counter.to_s%>" value = ""> No </p>
+    <input type = "radio" name = "meat<%=meat_counter.to_s%>" value = "<%=value%>"> Yes
+    <input type = "radio" name = "meat<%=meat_counter.to_s%>" value = ""> No </p>
     <%meat_counter += 1%>
     <%end%>
 
@@ -29,8 +29,8 @@ Veggies:
  <%veg_counter = 0%>
     <%veg.each do |value|%>
     <p> <%=value%>
-    <input type = "radio" name = "vegs<%=veg_counter.to_s%>" value = "<value>"> Yes
-    <input type = "radio" name = "vegs<%=veg_counter.to_s%>" value = "no"> No </p>
+    <input type = "radio" name = "veg<%=veg_counter.to_s%>" value = "<value>"> Yes
+    <input type = "radio" name = "veg<%=veg_counter.to_s%>" value = "no"> No </p>
     <%veg_counter += 1%>
     <%end%>
 <input type = "submit">
