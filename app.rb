@@ -13,9 +13,19 @@ post "/index" do
     #  puts "in post index, sauce is #{sauce_type}"
 
     redirect "/confirm"
-    "#{sauce_type} is the sauce"
 end
 get "/confirm" do 
-    # puts "in get confirm, pizza size is #{pizza_size}"
+    #puts "in get confirm, pizza size is #{pizza_size}"
     erb :confirm, locals: {sauce: session[:sauce_type], cheese: session[:cheese_type], meat: session[:meat_type], veg: session[:veg_type], size: session[:pizza_size]}
 end
+post '/confirm' do
+    session[:sauce_type] = params[:sauces]
+    session[:cheese_type] = params[:cheeses]
+    session[:meat_type] = params[:meats]
+    session[:veg_type] = params[:vegs]
+    session[:pizza_size] = params[:sizes]
+    redirect "/complete"
+  end
+  get "/complete" do
+   erb :confirm, locals: {sauces: session[:sauce_type], cheeses: session[:cheese_type], meats: session[:meat_type], vegs: session[:veg_type], sizes: session[:pizza_size]}
+  end
