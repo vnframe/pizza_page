@@ -1,37 +1,40 @@
 <form method="post" action="/confirm"> 
+Size :
+<%size.each do |value|%>
 
-Sauce:
-    <%sauce_counter = 0%>
+<p> <%=value%>
+    <input type = "radio" name = "size[<%=value%>]" value = "<%=value%>"> Yes
+    <input type = "radio" name = "size[<%=value%>]" value = ""> No </p>
+<%end%>
+
+
+Sauce: <br>
     <%sauce.each do |value|%>
-    <p> <%=value%>
-    <input type = "radio" name = "sauces[<%=sauce_counter.to_s%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "sauces[<%=sauce_counter.to_s%>]" value = "<%=value%>"> No </p>
-    <%sauce_counter += 1%>
+    <img src = ./img/<%=value%>.jpeg> <p> <%=value%> 
+    <input type = "radio" name = "sauces[<%=value%>]" value = "<%=value%>"> Yes
+    <input type = "radio" name = "sauces[<%=value%>]" value = ""> No </p>
     <%end%>
-Cheese:
-    <%cheese_counter = 0%>
+Cheese:<br>
+<br>
     <%cheese.each do |value|%>
-    <p> <%=value%>
-    <input type = "radio" name = "cheeses[<%=cheese_counter.to_s%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "cheeses[<%=cheese_counter.to_s%>]" value = "<%=value%>"> No </p>
-    <%cheese_counter += 1%>
+    <img src = ./img/<%=value%>.jpeg><p> <%=value%>
+    <input type = "radio" name = "cheeses[<%=value%>]" value = "<%=value%>"> Yes
+    <input type = "radio" name = "cheeses[<%=value%>]" value = ""> No </p>
     <%end%>
-Meat: 
-     <%meat_counter = 0%>
+Meat: <br> 
+<br>
     <%meat.each do |value|%>
-    <p> <%=value%>
-    <input type = "radio" name = "meats[<%=meat_counter.to_s%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "meats[<%=meat_counter.to_s%>]" value = "<%=value%>"> No </p>
-    <%meat_counter += 1%>
+    <img src = ./img/<%=value%>.jpeg><p> <%=value%>
+    <input type = "radio" name = "meats[<%=value%>]" value = "<%=value%>"> Yes
+    <input type = "radio" name = "meats[<%=value%>]" value = ""> No </p>
     <%end%>
 
-Veggies:
- <%veg_counter = 0%>
+Veggies:<br>
+<br>
     <%veg.each do |value|%>
-    <p> <%=value%>
-    <input type = "radio" name = "[vegs<%=veg_counter.to_s%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "[vegs<%=veg_counter.to_s%>]" value = "<%=value%>"> No </p>
-    <%veg_counter += 1%>
+    <img src = ./img/<%=value%>.jpeg><p> <%=value%>
+    <input type = "radio" name = "vegs[<%=value%>]" value = "<%=value%>"> Yes
+    <input type = "radio" name = "vegs[<%=value%>]" value = ""> No </p>
     <%end%>
 <input type = "submit">
     </form>

@@ -23,9 +23,10 @@ post '/confirm' do
     session[:cheese_type] = params[:cheeses]
     session[:meat_type] = params[:meats]
     session[:veg_type] = params[:vegs]
-    session[:pizza_size] = params[:sizes]
+    session[:pizza_size] = params[:size]
     p "sauce is #{session[:sauce_type]}"
     p "cheese is #{session[:cheese_type]}"
+    p "veg is #{}"
     redirect "/complete"
   end
   get '/complete' do

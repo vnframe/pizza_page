@@ -1,32 +1,32 @@
 Please choose your sauce, cheese, and toppings. 
 <form method = "post" action = "/index">
 <p> Size: </p>
-<p><input type = "radio" name = "size" value = "personal"> personal</p>
-<p><input type = "radio" name = "size" value = "small"> small </p>
-<p><input type = "radio" name = "size" value = "medium"> medium </p>
-<p><input type = "radio" name = "size" value = "large"> large </p>
-<p><input type = "radio" name = "size" value = "x-large"> x-large </p>
+<p><input type = "radio" name = "size[]" value = "personal"> personal</p>
+<p><input type = "radio" name = "size[]" value = "small"> small </p>
+<p><input type = "radio" name = "size[]" value = "medium"> medium </p>
+<p><input type = "radio" name = "size[]" value = "large"> large </p>
+<p><input type = "radio" name = "size[]" value = "x-large"> x-large </p>
 </p>
 <p> Sauce: <br></p>
-<p><input type = "checkbox" name = "sauce[]" value = "regular"> regular</p>
-<p><input type = "checkbox" name = "sauce[]" value = "garlic"> garlic</p>
-<p><input type = "checkbox" name = "sauce[]" value = "garden_herbs"> garden herbs</p>
+<p><input type = "radio" name = "sauce[]" value = "marinara"> <img src = ./img/marinara.jpeg>marinara
+<input type = "radio" name = "sauce[]" value = "alfredo"> <img src = ./img/alfredo.jpeg>alfredo
+<input type = "radio" name = "sauce[]" value = "bbq"><img src = ./img/bbq.jpeg> bbq</p>
 <p> Cheese: <br></p>
-<p><input type = "checkbox" name = "cheese[]" value = "mozzarella"> mozzarella </p>
-<p><input type = "checkbox" name = "cheese[]" value = "italian_blend"> italian italian_blend</p>
-<p><input type = "checkbox" name = "cheese[]" value = "provolone"> provolone </p>
-<p><input type = "checkbox" name = "cheese[]" value = "parmesan"> parmesan </p>
+<p><input type = "checkbox" name = "cheese[]" value = "mozzarella"> <img src = ./img/mozzarella.jpeg>mozzarella
+<input type = "checkbox" name = "cheese[]" value = "italian_blend"> <img src = ./img/italian_blend.jpeg>italian blend
+<input type = "checkbox" name = "cheese[]" value = "provolone"> <img src = ./img/provolone.jpeg>  provolone
+<input type = "checkbox" name = "cheese[]" value = "parm"> <img src = ./img/parm.jpeg> parmesan</p>
  </p>
 
 <p> Meat: <br>
-<p><input type = "checkbox" name = "meat[]" value = "pepperoni"> pepperoni</p>
-<p><input type = "checkbox" name = "meat[]" value = "ham"> ham </p>
-<p><input type = "checkbox" name = "meat[]" value = "sausage"> sausage </p>
-<p><input type = "checkbox" name = "meat[]" value = "bacon"> bacon </p>
+<input type = "checkbox" name = "meat[]" value = "pepperoni"><img src = ./img/pepperoni.jpeg> pepperoni
+<input type = "checkbox" name = "meat[]" value = "ham">  <img src = ./img/ham.jpeg>ham
+<input type = "checkbox" name = "meat[]" value = "sausage"> <img src = ./img/sausage.jpeg>sausage 
+<input type = "checkbox" name = "meat[]" value = "bacon"> <img src = ./img/bacon.jpeg>bacon</p>
 <p> Veggies: <br>
-<p><input type = "checkbox" name = "veg[]" value = "peppers"> peppers</p>
-<p><input type = "checkbox" name = "veg[]" value = "mushrooms"> mushrooms</p>
-<p><input type = "checkbox" name = "veg[]" value = "onions"> onions</p>
-<p><input type = "checkbox" name = "veg[]" value = "olives"> olives</p>
+<input type = "checkbox" name = "veg[]" value = "peppers"> <img src = ./img/peppers.jpeg>peppers
+<input type = "checkbox" name = "veg[]" value = "mushrooms"> <img src = ./img/mushrooms.jpeg>mushrooms
+<input type = "checkbox" name = "veg[]" value = "onions"> <img src = ./img/onions.jpeg>onions
+<input type = "checkbox" name = "veg[]" value = "olives"> <img src = ./img/olives.jpeg>olives</p>
 <input type = "submit">
 </form>

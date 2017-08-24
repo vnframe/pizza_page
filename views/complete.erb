@@ -1,3 +1,16 @@
-<%=sauce_final%>
-<%=cheese_final%>
-<%=meat_final%>
+You will have a 
+<%size_final.each do |value|%>
+<p><%=value.shift%>
+<%end%> pizza with
+<%sauce_final.each do |value|%>
+<p> <%=value.shift %> sauce
+<%end%>
+<%cheese_final.each do |value|%>
+<p> <%=value.shift %> 
+<%end%>
+<%meat_final.each do |value|%>
+<p> <%=value.shift %>
+<%end%>
+<%veg_final.each do |value|%>
+<p> <%=value.shift %>
+<%end%>
