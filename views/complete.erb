@@ -1,16 +1,26 @@
 You will have a 
 <%size_final.each do |value|%>
-<p><%=value.shift%>
+<%value = value.shift%>
+<p><%=value%>
+
 <%end%> pizza with
 <%sauce_final.each do |value|%>
-<p> <%=value.shift %> sauce
+<%value = value.shift%> <br>
+<p> <%=value %><br>
+<img src = "./img/<%=value%>.jpeg">
 <%end%>
 <%cheese_final.each do |value|%>
-<p> <%=value.shift %> 
+<%value = value.shift%> <br>
+<p> <%=value %><br>
+ <img src = "./img/<%=value%>.jpeg">
 <%end%>
 <%meat_final.each do |value|%>
-<p> <%=value.shift %>
+<%value = value.shift%>
+<p> <%=value%><br>
+<img src = "./img/<%=value%>.jpeg">
 <%end%>
 <%veg_final.each do |value|%>
-<p> <%=value.shift %>
+<%value = value.shift%>
+<p> <%=value%><br>
+<img src = "./img/<%=value%>.jpeg">
 <%end%>

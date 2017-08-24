@@ -4,7 +4,7 @@ Size :
 
 <p> <%=value%>
     <input type = "radio" name = "size[<%=value%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "size[<%=value%>]" value = ""> No </p>
+    <input type = "radio" name = "size[<%=value%>]" value = "no"> No </p>
 <%end%>
 
 
@@ -12,21 +12,21 @@ Sauce: <br>
     <%sauce.each do |value|%>
     <img src = ./img/<%=value%>.jpeg> <p> <%=value%> 
     <input type = "radio" name = "sauces[<%=value%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "sauces[<%=value%>]" value = ""> No </p>
+    <input type = "radio" name = "sauces[<%=value%>]" value = "no"> No </p>
     <%end%>
 Cheese:<br>
 <br>
     <%cheese.each do |value|%>
     <img src = ./img/<%=value%>.jpeg><p> <%=value%>
     <input type = "radio" name = "cheeses[<%=value%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "cheeses[<%=value%>]" value = ""> No </p>
+    <input type = "radio" name = "cheeses[<%=value%>]" value = "no"> No </p>
     <%end%>
 Meat: <br> 
 <br>
     <%meat.each do |value|%>
     <img src = ./img/<%=value%>.jpeg><p> <%=value%>
     <input type = "radio" name = "meats[<%=value%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "meats[<%=value%>]" value = ""> No </p>
+    <input type = "radio" name = "meats[<%=value%>]" value = "no"> No </p>
     <%end%>
 
 Veggies:<br>
@@ -34,7 +34,7 @@ Veggies:<br>
     <%veg.each do |value|%>
     <img src = ./img/<%=value%>.jpeg><p> <%=value%>
     <input type = "radio" name = "vegs[<%=value%>]" value = "<%=value%>"> Yes
-    <input type = "radio" name = "vegs[<%=value%>]" value = ""> No </p>
+    <input type = "radio" name = "vegs[<%=value%>]" value = "no"> No </p>
     <%end%>
 <input type = "submit">
     </form>
