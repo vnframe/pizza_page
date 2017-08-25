@@ -24,3 +24,10 @@ You will have a
 <p> <%=value%><br>
 <img src = "./img/<%=value%>.jpeg">
 <%end%>
+<form method = "post" action = "/complete">
+<%delivery.each do |value|%>
+<p> <%=value%> </p>
+<input type = "text" name = "address" >
+<%end%>
+<input type = "submit">
+</form>
