@@ -46,3 +46,6 @@ post '/confirm' do
   get "/onway" do 
     erb :onway, locals: {sauce_final: session[:sauce_type], cheese_final: session[:cheese_type], meat_final: session[:meat_type], veg_final: session[:veg_type], size_final: session[:pizza_size], delivery: session[:deliver], address: session[:cust_address]}
   end
+  get "/index" do
+    erb :index
+  end
