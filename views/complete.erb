@@ -32,11 +32,10 @@ Cheese: <br>
 <%end%>
 <end>
 <form method = "post" action = "/complete">
-<%delivery.each do |value, key|%>
-<%if value == key%>
+<%delivery.each do |value|%>>
 <p> <%=value%> </p>
 <input type = "text" name = "address" >
 <%end%>
-<%end%>
+<button type = "button"> <a href = "/index" </a> Want another pizza?</button>
 <input type = "submit">
 </form>
