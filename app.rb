@@ -41,8 +41,14 @@ post '/confirm' do
     session[:pizza_size] = params[:size]
     session[:deliver] = params[:delivery]
     session[:cust_address] = params[:address]
-    redirect "/onway"
+    current_pizza = params[:total].to_i || 0
+    session[:total] = session[:total] || 0
+    session[:total] = session[:total] + current_pizza
+    redirect "/totalorder"
   end 
+  get "/totalorder" do
+    erb :totalorder, locals: {sauce_final: session[:sauce_type], cheese_final: session[:cheese_type], meat_final: session[:meat_type], veg_final: session[:veg_type], size_final: session[:pizza_size], delivery: session[:deliver], address: session[:cust_address], total_final: session[:total]}
+  end
   get "/onway" do 
     erb :onway, locals: {sauce_final: session[:sauce_type], cheese_final: session[:cheese_type], meat_final: session[:meat_type], veg_final: session[:veg_type], size_final: session[:pizza_size], delivery: session[:deliver], address: session[:cust_address]}
   end

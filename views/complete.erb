@@ -27,22 +27,22 @@ Cheese: <br>
     <%if value == key%>
     <p> <%=value %><br>
     <img src = "./img/<%=value%>.jpeg">
-   
+   <%total += 1%>
 <%end%>
-<%total += 1%>
 <%end%>
     <%meat_final.each do |value, key|%>
     <%if value == key%>
     <p> <%=value%><br>
 <img src = "./img/<%=value%>.jpeg">
+    <%total += 1%>
     <%end%>
 <%end%>
 <%veg_final.each do |value, key|%>
     <%if value == key%>
     <p> <%=value%><br>
     <img src = "./img/<%=value%>.jpeg">
-    <%end%> 
     <%total+=1%>
+    <%end%> 
 <%end%>
 <br>
 Your total is $<%=total%>
@@ -55,6 +55,7 @@ Your total is $<%=total%>
 <%end%>
 <%end%>
  
+ Your total is <%total%>
 <input type = "submit">
 </form> 
 

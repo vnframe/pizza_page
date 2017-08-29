@@ -1,22 +1,10 @@
 <form method="post" action="/confirm"> 
-<%total = 0%>
 Size :
 <%size.each do |value|%>
 
 <p> <%=value%>
     <input type = "radio" name = "size[<%=value%>]" value = "<%=value%>"> Yes
     <input type = "radio" name = "size[<%=value%>]" value = "no"> No </p>
-    <%if value == "personal"%>
-        <%total += 2%>
-    <%elsif value == "small"%>
-        <% total += 3%>
-    <%elsif value == "medium"%>
-        <%total += 5%>
-    <%elsif value == "large"%>
-        <%total += 7%>
-    <%else%>
-        <% total += 8%>
-    <%end%>
 <%end%>
 
 
@@ -32,7 +20,6 @@ Cheese:<br>
     <img src = ./img/<%=value%>.jpeg><p> <%=value%>
     <input type = "radio" name = "cheeses[<%=value%>]" value = "<%=value%>"> Yes
     <input type = "radio" name = "cheeses[<%=value%>]" value = "no"> No </p>
-    <%total += 1%>
     <%end%>
 Meat: <br> 
 <br>
@@ -40,7 +27,6 @@ Meat: <br>
     <img src = ./img/<%=value%>.jpeg><p> <%=value%>
     <input type = "radio" name = "meats[<%=value%>]" value = "<%=value%>"> Yes
     <input type = "radio" name = "meats[<%=value%>]" value = "no"> No </p>
-    <%total += 1%>
     <%end%>
 
 Veggies:<br>
@@ -49,12 +35,10 @@ Veggies:<br>
     <img src = ./img/<%=value%>.jpeg><p> <%=value%>
     <input type = "radio" name = "vegs[<%=value%>]" value = "<%=value%>"> Yes
     <input type = "radio" name = "vegs[<%=value%>]" value = "no"> No </p>
-    <%total += 1%>
     <%end%>
     Would you like your order delivered?
     <input type = "radio" name = "delivery[]" value = "delivery"> Yes
     <input type = "radio" name = "delivery[]" value = "no"> No <br>
-    Your subtotal is <%=total%>, press submit to apply any changes.
 <input type = "submit">
     </form>
 
